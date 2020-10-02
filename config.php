@@ -30,4 +30,17 @@ function hapus_data($id)
 
     header("location:index.php");
 }
+
+if(isset($_POST['edit_user']) == 'edit_user')
+{
+    edit_data($_POST['ui_id'],$_POST['ui_nama'],$_POST['ui_posisi'],$_POST['ui_tgl_masuk']);
+}
+
+function edit_data($id,$nama,$posisi,$tgl_masuk)
+{
+    global $mysqli;
+    mysqli_query($mysqli,"update user_id set id='$id', nama='$nama', posisi='$posisi', tgl_masuk='$tgl_masuk' where id='$id'");
+    
+    header("location:../index.php");
+}
 ?>

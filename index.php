@@ -14,7 +14,7 @@
 
 	<table width="60%" border="1">
 		<tr>
-			<th width="10%">Name</th><th width="8%">Posisi</th><th width="7%">Tanggal Masuk</th><th width="4%">Atur Data</th>
+			<th width="10%">Name</th><th width="8%">Posisi</th><th width="7%">Tanggal Masuk</th><th width="5%" colspan="2">Atur Data</th>
 		</tr>
 		<?php
 			while($user_id = mysqli_fetch_array($result)) {
@@ -28,6 +28,9 @@
 						<input type="hidden" name="hapus_user" value="<?php echo $user_id['id'];?>">
 						<input type="submit" name="hapus" value="Hapus User">
 					</form>
+				</td>
+				<td>
+					<a href="edit_user.php/?id=<?php echo $user_id['id']?>">Edit User</a>
 				</td>
 				<?php
 				echo "</tr>";
