@@ -16,6 +16,8 @@ function tambah_data_user_id($id,$nama,$posisi,$tgl_masuk)
 {
     global $mysqli;
     mysqli_query($mysqli,"insert into user_id values ('$id','$nama','$posisi','$tgl_masuk')");
+
+    header("location:../");
 }
 
 if(isset($_POST['hapus_user']))
@@ -41,6 +43,6 @@ function edit_data($id,$nama,$posisi,$tgl_masuk)
     global $mysqli;
     mysqli_query($mysqli,"update user_id set id='$id', nama='$nama', posisi='$posisi', tgl_masuk='$tgl_masuk' where id='$id'");
     
-    header("location:../index.php");
+    header("location:../../");
 }
 ?>

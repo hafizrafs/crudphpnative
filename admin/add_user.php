@@ -1,3 +1,7 @@
+<?php
+    include_once("config.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +11,7 @@
 </head>
 <body>
     
-    <form action="index.php" method="post">
+    <form action="" method="post">
         <table>
             <tr>
                 <td>ID User</td>
